@@ -5,14 +5,8 @@ import VeltCustomization from "./VeltCustomization";
 
 export default function Home() {
   return (
-    <VeltProvider apiKey='krUVK3LgYeifgViaY3Oa' config={{
-      version: '4.3.1-beta.2',
-      develop: true,
-    } as {
-      version: string,
-      develop: boolean,
-    }}>
-      <div className="flex flex-col h-screen bg-white">
+    <VeltProvider apiKey='oGbYp7xKvkPGcawWbGKJ'>
+      <div className="flex flex-col min-h-screen bg-white pt-16">
         <Initialise />
         <Recorder />
         <VeltCustomization />
