@@ -134,6 +134,15 @@
     gap: 8px;
     padding: 16px;
 
+    app-if {
+        flex: 1 !important;
+        width: 0px !important;
+
+        &:empty {
+            display: none !important;
+        }
+    }
+
     .settings-toggle-icon-container-icon {
         display: flex;
         align-items: center;
@@ -244,9 +253,10 @@
     }
   }
 
-  .velt-media-source-settings-label, .velt-media-source-settings-options--label-selected {
+  .velt-media-source-settings-label, .velt-media-source-settings-options--label-selected, .settings-toggle-icon-container-label {
     font-size: 14px !important;
     color: #212121 !important;
+    font-family: 'Inter', sans-serif !important;
   }
 
   velt-media-source-settings-options-item-label {
