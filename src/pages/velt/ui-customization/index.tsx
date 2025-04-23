@@ -12,8 +12,8 @@ const VeltCustomization = () => {
 
     useEffect(() => {
         if (veltButtonClickEventData) {
-            if (veltButtonClickEventData.buttonContext.type === 'multi-select') {
-                const selections = veltButtonClickEventData.buttonContext.selections?.['transcribe-group'];
+            if (veltButtonClickEventData?.buttonContext?.type === 'multi-select') {
+                const selections = veltButtonClickEventData.buttonContext?.selections?.['transcribe-group'];
                 if (selections?.['transcribe-button']) {
                     recorderUtils?.enableRecordingTranscription();
                 } else {
