@@ -525,3 +525,7 @@ app-recorder-control-panel-floating-mode-waveform {
 video {
     background-color: #e8e8e8 !important;
 }
+
+app-recorder-control-panel-screen-mini-container {
+    margin: 0px !important;
+}

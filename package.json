@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@veltdev/react": "^4.4.0-beta.6",
+    "@veltdev/react": "^4.4.0-beta.8",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18"
@@ -19,7 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@veltdev/types": "^4.4.0-beta.6",
+    "@veltdev/types": "^4.4.0-beta.8",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "postcss": "^8",

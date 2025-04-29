@@ -69,10 +69,10 @@ const VeltRecordingControlPanel = () => {
                         <VeltRecorderControlPanelWireframe.FloatingMode.CollapsedButton />
                         <VeltRecorderControlPanelWireframe.FloatingMode.Paused />
                     </VeltRecorderControlPanelWireframe.FloatingMode.Container>
-                    <VeltRecorderControlPanelWireframe.FloatingMode.ScreenVideo>
+                    <VeltRecorderControlPanelWireframe.FloatingMode.ScreenMiniContainer>
                         <VeltRecorderControlPanelWireframe.FloatingMode.Screen />
                         <VeltRecorderControlPanelWireframe.FloatingMode.Waveform />
-                    </VeltRecorderControlPanelWireframe.FloatingMode.ScreenVideo>
+                    </VeltRecorderControlPanelWireframe.FloatingMode.ScreenMiniContainer>
 
                     <VeltRecorderControlPanelWireframe.FloatingMode.Loading />
                 </div>
