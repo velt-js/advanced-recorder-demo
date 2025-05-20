@@ -1,4 +1,4 @@
-import { VeltRecorderTool, VeltRecorderControlPanel, VeltRecorderPlayer, useRecordings } from "@veltdev/react";
+import { VeltRecorderTool, VeltRecorderControlPanel, VeltRecorderPlayer, useRecordings, useRecorderEventCallback } from "@veltdev/react";
 import { RecorderData } from "@veltdev/types";
 import { useEffect, useState } from "react";
 
@@ -10,6 +10,13 @@ export default function Recorder() {
     useEffect(() => {
         setRecordings(recordingsData);
     }, [recordingsData]);
+
+    const recordingEditDoneEvent = useRecorderEventCallback('recordingEditDone');
+    useEffect(() => {
+        if (recordingEditDoneEvent) {
+            console.log('recordingEditDone: ', recordingEditDoneEvent);
+        }
+    }, [recordingEditDoneEvent]);
 
 
     return (
