@@ -1,12 +1,16 @@
-import { VeltVideoEditorPlayerWireframe } from "@veltdev/react";
+import { VeltIf, VeltVideoEditorPlayerWireframe } from "@veltdev/react";
 
 const VeltVideoEditorPlayer = () => {
     return (
         <VeltVideoEditorPlayerWireframe>
             <div className='velt-video-editor-player--header'>
                 <VeltVideoEditorPlayerWireframe.ApplyButton>
-                    <VeltVideoEditorPlayerWireframe.ApplyButton.Loading />
-                    <span>Done</span>
+                    <VeltIf condition="{isLoading}">
+                        <span>Applying...</span>
+                    </VeltIf>
+                    <VeltIf condition="!{isLoading}">
+                        <span>Done</span>
+                    </VeltIf>
                 </VeltVideoEditorPlayerWireframe.ApplyButton>
                 <VeltVideoEditorPlayerWireframe.CloseButton>
                     <span>Close</span>
