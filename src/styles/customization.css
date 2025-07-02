@@ -245,6 +245,10 @@
     cursor: pointer;
     padding: 16px;
 
+    &.retake-button {
+        width: auto;
+    }
+
     .button-container-label-text {
         font-size: 14px;
         font-weight: 500;
@@ -366,7 +370,7 @@
   .velt-video-editor-player--header {
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-end !important;
+    justify-content: space-between !important;
     padding-inline: 20px !important;
     height: 76px !important;
     border-bottom: 1px solid #E0E0E0 !important;
@@ -393,26 +397,15 @@
         cursor: not-allowed !important;
         opacity: 0.6 !important;
     }
+
+    app-if {
+        &:empty {
+            display: none !important;
+        }
+    }
   }
 
   .velt-video-editor-player--close-button {
-    all: initial !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    border: 1px solid #212121 !important;
-    border-radius: 8px !important;
-    padding-inline: 16px !important;
-    height: 36px !important;
-    cursor: pointer !important;
-    color: #212121 !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    font-family: 'Inter', sans-serif !important;
-    box-sizing: border-box !important;
-
-
     &.velt-video-editor-player--close-disabled-control {
         cursor: not-allowed !important;
         opacity: 0.6 !important;
@@ -448,7 +441,7 @@
     z-index: 1000 !important;
     background-color: #fff !important;
 
-    .video-editor-player-split-button, .video-editor-player-delete-button {
+    .video-editor-player-split-button, .video-editor-player-delete-button, .video-editor-player-add-zoom-button {
         all: initial !important;
         display: flex !important;
         align-items: center !important;
@@ -484,6 +477,11 @@
         cursor: not-allowed !important;
         opacity: 0.6 !important;
     }
+
+    .velt-video-editor-player--add-zoom-disabled-control {
+        cursor: not-allowed !important;
+        opacity: 0.6 !important;
+    }
   }
 
 .video-editor-player-container {
@@ -499,7 +497,6 @@
 
 .video-editor-player-footer {
     display: flex !important;
-    align-items: center !important;
     justify-content: center !important;
     width: 100vw !important;
     gap: 16px !important;
@@ -507,6 +504,10 @@
     velt-video-editor-player-timeline-internal {
         flex: 1 !important;
         max-width: 887px !important;
+    }
+
+    velt-video-editor-player-toggle-button-internal {
+        padding-top: 11px !important;
     }
 }
 

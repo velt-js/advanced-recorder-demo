@@ -10,7 +10,7 @@ const VeltRecordingPreviewStepsDialog = () => {
                     <div className='divider'></div>
                     <VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel>
                         <div className="button-panel-container">
-                            <VeltButtonWireframe id='transcribe-button' type='multi-select' group='transcribe-group' active={true}>
+                            <VeltButtonWireframe id='transcribe-button' type='single-select' group='transcribe-group'>
                                 <div className='button-container'>
                                     <span className='button-container-icon'>
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,58 +26,69 @@ const VeltRecordingPreviewStepsDialog = () => {
                                     <div className='button-container-radio-button'>
                                         <svg className='active-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g>
-                                                <rect width="16" height="16" rx="2" fill="black" />
-                                                <path d="M4.3335 8.00004L7.00016 10.6667L12.3335 5.33337" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M7.66634 8.00001H8.33301M14.6663 8.00001C14.6663 11.6819 11.6816 14.6667 7.99967 14.6667C4.31778 14.6667 1.33301 11.6819 1.33301 8.00001C1.33301 4.31811 4.31778 1.33334 7.99967 1.33334C11.6816 1.33334 14.6663 4.31811 14.6663 8.00001ZM11.333 8.00001C11.333 9.84096 9.84062 11.3333 7.99967 11.3333C6.15873 11.3333 4.66634 9.84096 4.66634 8.00001C4.66634 6.15906 6.15873 4.66668 7.99967 4.66668C9.84062 4.66668 11.333 6.15906 11.333 8.00001ZM10.6663 8.00001C10.6663 9.47277 9.47243 10.6667 7.99967 10.6667C6.52692 10.6667 5.33301 9.47277 5.33301 8.00001C5.33301 6.52725 6.52692 5.33334 7.99967 5.33334C9.47243 5.33334 10.6663 6.52725 10.6663 8.00001ZM9.99967 8.00001C9.99967 9.10458 9.10424 10 7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001C5.99967 6.89544 6.89511 6.00001 7.99967 6.00001C9.10424 6.00001 9.99967 6.89544 9.99967 8.00001ZM9.33301 8.00001C9.33301 8.73639 8.73605 9.33334 7.99967 9.33334C7.26329 9.33334 6.66634 8.73639 6.66634 8.00001C6.66634 7.26363 7.26329 6.66668 7.99967 6.66668C8.73605 6.66668 9.33301 7.26363 9.33301 8.00001ZM8.66634 8.00001C8.66634 8.3682 8.36786 8.66668 7.99967 8.66668C7.63148 8.66668 7.33301 8.3682 7.33301 8.00001C7.33301 7.63182 7.63148 7.33334 7.99967 7.33334C8.36786 7.33334 8.66634 7.63182 8.66634 8.00001Z" stroke="#212121" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                             </g>
                                         </svg>
 
                                         <svg className='inactive-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g>
-                                                <rect x="0.75" y="0.75" width="14.5" height="14.5" rx="1.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                <circle cx="7.99967" cy="8.00001" r="6.66667" stroke="#BDBDBD" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                             </g>
                                         </svg>
                                     </div>
                                 </div>
                             </VeltButtonWireframe>
-                            <VeltRecordingPreviewStepsDialogWireframe.Video.MicButton>
-                                <VeltRecordingPreviewStepsDialogWireframe.Video.MicButton.Off>
-                                    <div className='button-container'>
-                                        <span className='button-container-icon'>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.99967 6.26668V3.33334C9.99967 2.22877 9.10424 1.33334 7.99967 1.33334C7.2146 1.33334 6.53517 1.78569 6.20781 2.44397M7.99967 12.6667V14.6667M7.99967 12.6667C5.42235 12.6667 3.33301 10.5773 3.33301 8.00001V6.66668M7.99967 12.6667C10.577 12.6667 12.6663 10.5773 12.6663 8.00001V6.66668M5.33301 14.6667H10.6663M1.33301 1.33334L14.6663 14.6667M7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001V6.00001L9.41474 9.41337C9.05275 9.7758 8.55239 10 7.99967 10Z" stroke="black" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </span>
-                                        <div className='button-container-label'>
-                                            <span className='button-container-label-text'>Turn off microphone</span>
-                                        </div>
+                            <VeltButtonWireframe id='audio-button' type='single-select' group='transcribe-group'>
+                                <div className='button-container'>
+                                    <span className='button-container-icon'>
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 6.66667L2 9.33333M5 7.33333V8.66667M8 4V12M11 2V14M14 6.66667V9.33333" stroke="black" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div className='button-container-label'>
+                                        <span className='button-container-label-text'>Audio</span>
+                                        <span className='button-container-label-subtext'>Some description</span>
+                                    </div>
+                                    <div className='button-container-radio-button'>
+                                        <svg className='active-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g>
-                                                <rect width="16" height="16" rx="2" fill="black" />
-                                                <path d="M4.3335 8.00004L7.00016 10.6667L12.3335 5.33337" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M7.66634 8.00001H8.33301M14.6663 8.00001C14.6663 11.6819 11.6816 14.6667 7.99967 14.6667C4.31778 14.6667 1.33301 11.6819 1.33301 8.00001C1.33301 4.31811 4.31778 1.33334 7.99967 1.33334C11.6816 1.33334 14.6663 4.31811 14.6663 8.00001ZM11.333 8.00001C11.333 9.84096 9.84062 11.3333 7.99967 11.3333C6.15873 11.3333 4.66634 9.84096 4.66634 8.00001C4.66634 6.15906 6.15873 4.66668 7.99967 4.66668C9.84062 4.66668 11.333 6.15906 11.333 8.00001ZM10.6663 8.00001C10.6663 9.47277 9.47243 10.6667 7.99967 10.6667C6.52692 10.6667 5.33301 9.47277 5.33301 8.00001C5.33301 6.52725 6.52692 5.33334 7.99967 5.33334C9.47243 5.33334 10.6663 6.52725 10.6663 8.00001ZM9.99967 8.00001C9.99967 9.10458 9.10424 10 7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001C5.99967 6.89544 6.89511 6.00001 7.99967 6.00001C9.10424 6.00001 9.99967 6.89544 9.99967 8.00001ZM9.33301 8.00001C9.33301 8.73639 8.73605 9.33334 7.99967 9.33334C7.26329 9.33334 6.66634 8.73639 6.66634 8.00001C6.66634 7.26363 7.26329 6.66668 7.99967 6.66668C8.73605 6.66668 9.33301 7.26363 9.33301 8.00001ZM8.66634 8.00001C8.66634 8.3682 8.36786 8.66668 7.99967 8.66668C7.63148 8.66668 7.33301 8.3682 7.33301 8.00001C7.33301 7.63182 7.63148 7.33334 7.99967 7.33334C8.36786 7.33334 8.66634 7.63182 8.66634 8.00001Z" stroke="#212121" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </g>
+                                        </svg>
+
+                                        <svg className='inactive-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <circle cx="7.99967" cy="8.00001" r="6.66667" stroke="#BDBDBD" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                             </g>
                                         </svg>
                                     </div>
-                                </VeltRecordingPreviewStepsDialogWireframe.Video.MicButton.Off>
-                                <VeltRecordingPreviewStepsDialogWireframe.Video.MicButton.On>
-                                    <div className='button-container'>
-                                        <span className='button-container-icon'>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.99967 6.26668V3.33334C9.99967 2.22877 9.10424 1.33334 7.99967 1.33334C7.2146 1.33334 6.53517 1.78569 6.20781 2.44397M7.99967 12.6667V14.6667M7.99967 12.6667C5.42235 12.6667 3.33301 10.5773 3.33301 8.00001V6.66668M7.99967 12.6667C10.577 12.6667 12.6663 10.5773 12.6663 8.00001V6.66668M5.33301 14.6667H10.6663M1.33301 1.33334L14.6663 14.6667M7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001V6.00001L9.41474 9.41337C9.05275 9.7758 8.55239 10 7.99967 10Z" stroke="black" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </span>
-                                        <div className='button-container-label'>
-                                            <span className='button-container-label-text'>Turn off microphone</span>
-                                        </div>
-                                        <div className='button-container-radio-button'>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g>
-                                                    <rect x="0.75" y="0.75" width="14.5" height="14.5" rx="1.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                                </g>
-                                            </svg>
-                                        </div>
+                                </div>
+                            </VeltButtonWireframe>
+                            <VeltButtonWireframe id='turn-off-mic-button' type='single-select' group='transcribe-group' active={true}>
+                                <div className='button-container'>
+                                    <span className='button-container-icon'>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.99967 6.26668V3.33334C9.99967 2.22877 9.10424 1.33334 7.99967 1.33334C7.2146 1.33334 6.53517 1.78569 6.20781 2.44397M7.99967 12.6667V14.6667M7.99967 12.6667C5.42235 12.6667 3.33301 10.5773 3.33301 8.00001V6.66668M7.99967 12.6667C10.577 12.6667 12.6663 10.5773 12.6663 8.00001V6.66668M5.33301 14.6667H10.6663M1.33301 1.33334L14.6663 14.6667M7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001V6.00001L9.41474 9.41337C9.05275 9.7758 8.55239 10 7.99967 10Z" stroke="black" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div className='button-container-label'>
+                                        <span className='button-container-label-text'>Turn off microphone</span>
                                     </div>
-                                </VeltRecordingPreviewStepsDialogWireframe.Video.MicButton.On>
-                            </VeltRecordingPreviewStepsDialogWireframe.Video.MicButton>
+                                    <div className='button-container-radio-button'>
+                                        <svg className='active-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path d="M7.66634 8.00001H8.33301M14.6663 8.00001C14.6663 11.6819 11.6816 14.6667 7.99967 14.6667C4.31778 14.6667 1.33301 11.6819 1.33301 8.00001C1.33301 4.31811 4.31778 1.33334 7.99967 1.33334C11.6816 1.33334 14.6663 4.31811 14.6663 8.00001ZM11.333 8.00001C11.333 9.84096 9.84062 11.3333 7.99967 11.3333C6.15873 11.3333 4.66634 9.84096 4.66634 8.00001C4.66634 6.15906 6.15873 4.66668 7.99967 4.66668C9.84062 4.66668 11.333 6.15906 11.333 8.00001ZM10.6663 8.00001C10.6663 9.47277 9.47243 10.6667 7.99967 10.6667C6.52692 10.6667 5.33301 9.47277 5.33301 8.00001C5.33301 6.52725 6.52692 5.33334 7.99967 5.33334C9.47243 5.33334 10.6663 6.52725 10.6663 8.00001ZM9.99967 8.00001C9.99967 9.10458 9.10424 10 7.99967 10C6.89511 10 5.99967 9.10458 5.99967 8.00001C5.99967 6.89544 6.89511 6.00001 7.99967 6.00001C9.10424 6.00001 9.99967 6.89544 9.99967 8.00001ZM9.33301 8.00001C9.33301 8.73639 8.73605 9.33334 7.99967 9.33334C7.26329 9.33334 6.66634 8.73639 6.66634 8.00001C6.66634 7.26363 7.26329 6.66668 7.99967 6.66668C8.73605 6.66668 9.33301 7.26363 9.33301 8.00001ZM8.66634 8.00001C8.66634 8.3682 8.36786 8.66668 7.99967 8.66668C7.63148 8.66668 7.33301 8.3682 7.33301 8.00001C7.33301 7.63182 7.63148 7.33334 7.99967 7.33334C8.36786 7.33334 8.66634 7.63182 8.66634 8.00001Z" stroke="#212121" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </g>
+                                        </svg>
+
+                                        <svg className='inactive-icon' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <circle cx="7.99967" cy="8.00001" r="6.66667" stroke="#BDBDBD" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </VeltButtonWireframe>
                             <VeltRecordingPreviewStepsDialogWireframe.Video.StartRecording>
                                 <div className='recorder-button-container'>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
