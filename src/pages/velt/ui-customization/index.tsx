@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import VeltMediaSourceSettings from './VeltMediaSourceSettings';
 import VeltRecorderScreenTool from './VeltRecorderScreenTool';
 import VeltRecordingPreviewStepsDialog from './VeltRecordingPreviewStepsDialog';
-import VeltVideoEditorPlayer from './VeltVideoEditorPlayer';
 import VeltRecordingControlPanel from './VeltRecorderControlPanel';
 
 const VeltCustomization = () => {

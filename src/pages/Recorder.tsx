@@ -24,9 +24,13 @@ export default function Recorder() {
     useEffect(() => {
         if (recordingDoneEvent) {
             console.log('recordingDone: ', recordingDoneEvent);
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             recorderUtils?.enableOnboardingTooltip();
 
             setTimeout(() => {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 recorderUtils?.disableOnboardingTooltip()
             }, 5000);
         }
