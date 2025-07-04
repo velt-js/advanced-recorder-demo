@@ -1,547 +1,555 @@
 .cdk-overlay-container .snippyly-recording-preview-steps-dialog {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+}
+
+.snippyly-recording-preview-steps-dialog {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+
+  mat-dialog-container .mat-mdc-dialog-surface.mdc-dialog__surface {
+    border-radius: 0px !important;
+  }
+
+  .velt-recording-preview-video {
+    width: 100vw !important;
+    height: 100vh !important;
     max-width: 100vw !important;
     max-height: 100vh !important;
+    border-radius: 0px !important;
   }
+}
 
-  .snippyly-recording-preview-steps-dialog {
-    max-width: 100vw !important;
-    max-height: 100vh !important;
+.recording-preview-steps-dialog-video-wireframe-container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 
-    mat-dialog-container .mat-mdc-dialog-surface.mdc-dialog__surface {
-      border-radius: 0px !important;
-    }
-
-    .velt-recording-preview-video {
-      width: 100vw !important;
-      height: 100vh !important;
-      max-width: 100vw !important;
-      max-height: 100vh !important;
-      border-radius: 0px !important;
-    }
-  }
-
-  .recording-preview-steps-dialog-video-wireframe-container {
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-
-    .left-panel {
-      height: 100%;
-      width: 391px;
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border-right: 1px solid #e0e0e0;
-      padding: 40px;
-      gap: 45px;
-
-      .divider {
-        width: 100%;
-        height: 1px;
-        background-color: #e0e0e0;
-      }
-
-      .preferences-label {
-        font-size: 18px;
-        font-weight: 'medium';
-        color: #212121;
-      }
-
-      .button-panel-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-      }
-    }
-
-    .right-panel {
-      flex: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: #e8e8e8;
-      padding: 100px;
-    }
-  }
-
-  .velt-recorder-panel {
-    top: 0px !important;
-    align-items: normal !important;
-  }
-
-  .velt-recorder-control-panel-action-bar--floating-mode {
-    all: initial !important;
-  }
-
-  .velt-recorder-control-panel-floating--container {
-    all: initial !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 16px !important;
-  }
-
-  .recorder-button-container {
-    width: 311px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: #212121;
-    border-radius: 8px;
-    padding: 16px;
-    cursor: pointer;
-
-    span {
-        font-size: 14px;
-        font-weight: 500;
-        color: #fff;
-    }
-
-    &:hover {
-      background-color: #333;
-    }
-  }
-
-  .media-source-settings-container {
+  .left-panel {
+    height: 100%;
+    width: 391px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    position: relative;
-  }
-
-  .media-source-settings-overlay-container {
-    position: relative;
-  }
-
-  .settings-toggle-icon-container {
-    width: 311px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
     background-color: #fff;
-    border: 1px solid #E0E0E0;
-    cursor: pointer;
-    gap: 8px;
-    padding: 16px;
+    border-right: 1px solid #e0e0e0;
+    padding: 40px;
+    gap: 45px;
 
-    app-if {
-        flex: 1 !important;
-        width: 0px !important;
-
-        &:empty {
-            display: none !important;
-        }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: #e0e0e0;
     }
 
-    .settings-toggle-icon-container-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
+    .preferences-label {
+      font-size: 18px;
+      font-weight: "medium";
+      color: #212121;
     }
-  }
 
-  .settings-options-container {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  velt-media-source-settings-selected-label-internal {
-    overflow: hidden !important;
-  }
-
-  .velt-media-source-settings-audio {
-    all: initial !important;
-  }
-
-  .velt-media-source-settings-video {
-    all: initial !important;
-  }
-  
-  .velt-media-source-settings-options {
-    position: relative !important;
-    background-color: #fff !important;
-    border-radius: 8px !important;
-    padding: 8px 16px !important;
-    border: 1px solid #E0E0E0 !important;
-    max-height: 200px !important;
-    overflow-y: auto !important;
-    z-index: 1000 !important;
-  }
-
-  velt-media-source-settings-options-item-label {
-    width: 100% !important;
-    overflow: hidden !important;
-  }
-
-  .velt-media-source-settings-options--selected-icon {
-    padding-left: 4px !important;
-  }
-
-  .button-container {
-    width: 311px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border-radius: 8px;
-    border: 1px solid #212121;
-    cursor: pointer;
-    padding: 16px;
-
-    .button-container-radio-button, .button-container-icon {
+    .button-panel-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .button-container-label {
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-        flex: 1;
-    }
-
-    .button-container-label-text {
-        font-size: 12px;
-        font-weight: 500;
-        color: #212121;
-    }
-
-    .button-container-label-subtext {
-        font-size: 12px;
-        font-weight: 400;
-        color: #757575;
-    }
-  }
-
-  app-recording-preview-steps-dialog-start-recording {
-    margin-top: 29px !important;
-  }
-
-  .outline-button-container {
-    width: 311px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border-radius: 8px;
-    border: 1px solid #212121;
-    cursor: pointer;
-    padding: 16px;
-
-    &.retake-button {
-        width: auto;
-    }
-
-    .button-container-label-text {
-        font-size: 14px;
-        font-weight: 500;
-        color: #212121;
-    }
-  }
-
-  .velt-media-source-settings-label, .velt-media-source-settings-options--label-selected, .settings-toggle-icon-container-label {
-    font-size: 14px !important;
-    color: #212121 !important;
-    font-family: 'Inter', sans-serif !important;
-  }
-
-  velt-media-source-settings-options-item-label {
-    font-size: 14px !important;
-    color: #757575 !important;
-  }
-
-  app-recorder-control-panel-floating-mode-screen-video {
-    margin: 0px !important;
-  }
-
-  .center-container {
-
-    .left-panel {
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 16px;
     }
   }
 
-  app-recorder-control-panel-action-bar-toggle {
-    margin: 0px !important;
+  .right-panel {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e8e8e8;
+    padding: 100px;
+  }
+}
+
+.velt-recorder-panel {
+  top: 0px !important;
+  align-items: normal !important;
+}
+
+.velt-recorder-control-panel-action-bar--floating-mode {
+  all: initial !important;
+}
+
+.velt-recorder-control-panel-floating--container {
+  all: initial !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+.recorder-button-container {
+  width: 311px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #212121;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
   }
 
-  .velt-recorder-control-panel-action-bar--screen {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 16px !important;
+  &:hover {
+    background-color: #333;
+  }
+}
+
+.media-source-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.media-source-settings-overlay-container {
+  position: relative;
+}
+
+.settings-toggle-icon-container {
+  width: 311px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  gap: 8px;
+  padding: 16px;
+
+  app-if {
+    flex: 1 !important;
+    width: 0px !important;
+
+    &:empty {
+      display: none !important;
+    }
   }
 
-  .velt-screen-preview {
-    border-radius: 4px !important;
+  .settings-toggle-icon-container-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.settings-options-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+velt-media-source-settings-selected-label-internal {
+  overflow: hidden !important;
+}
+
+.velt-media-source-settings-audio {
+  all: initial !important;
+}
+
+.velt-media-source-settings-video {
+  all: initial !important;
+}
+
+.velt-media-source-settings-options {
+  position: relative !important;
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  border: 1px solid #e0e0e0 !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  z-index: 1000 !important;
+}
+
+velt-media-source-settings-options-item-label {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.velt-media-source-settings-options--selected-icon {
+  padding-left: 4px !important;
+}
+
+.button-container {
+  width: 311px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+  cursor: pointer;
+  padding: 16px;
+
+  .button-container-radio-button,
+  .button-container-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .recorder-timer-container {
-    align-self: flex-start !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-bottom: 8px !important;
+  .button-container-label {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
   }
 
-  .velt-recorder-control-panel-action-bar--time {
-    margin-left: 2px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: #212121 !important;
+  .button-container-label-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #212121;
   }
 
+  .button-container-label-subtext {
+    font-size: 12px;
+    font-weight: 400;
+    color: #757575;
+  }
+}
+
+app-recording-preview-steps-dialog-start-recording {
+  margin-top: 29px !important;
+}
+
+.outline-button-container {
+  width: 311px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+  cursor: pointer;
+  padding: 16px;
+
+  &.retake-button {
+    width: auto;
+  }
+
+  .button-container-label-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+  }
+}
+
+.velt-media-source-settings-label,
+.velt-media-source-settings-options--label-selected,
+.settings-toggle-icon-container-label {
+  font-size: 14px !important;
+  color: #212121 !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+velt-media-source-settings-options-item-label {
+  font-size: 14px !important;
+  color: #757575 !important;
+}
+
+app-recorder-control-panel-floating-mode-screen-video {
+  margin: 0px !important;
+}
+
+.center-container {
+  .left-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+app-recorder-control-panel-action-bar-toggle {
+  margin: 0px !important;
+}
+
+.velt-recorder-control-panel-action-bar--screen {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+.velt-screen-preview {
+  border-radius: 4px !important;
+}
+
+.recorder-timer-container {
+  align-self: flex-start !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+}
+
+.velt-recorder-control-panel-action-bar--time {
+  margin-left: 2px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #212121 !important;
+}
+
+.inactive-icon {
+  display: block !important;
+}
+
+.active-icon {
+  display: none !important;
+}
+
+.velt-button--active {
   .inactive-icon {
-    display: block !important;
+    display: none !important;
   }
 
   .active-icon {
+    display: block !important;
+  }
+}
+
+velt-recording-preview-steps-dialog-mic-button-off-internal {
+  &:empty {
     display: none !important;
   }
+}
 
-
-  .velt-button--active {
-    .inactive-icon {
-      display: none !important;
-    }
-
-    .active-icon {
-      display: block !important;
-    }
-  }
-
-  velt-recording-preview-steps-dialog-mic-button-off-internal {
-    &:empty {
-      display: none !important;
-    }
-  }
-
-  velt-recording-preview-steps-dialog-mic-button-on-internal {
-    &:empty {
-      display: none !important;
-    }
-  }
-
-
-  .velt-recorder-control-panel-loading--floating-mode {
-    all: initial !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 16px !important;
-
-    .velt-recorder-control-panel-loading--text {
-        color: #212121 !important;
-        font-family: 'Inter', sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 500 !important;
-    }
-  }
-
-  .velt-video-editor-player--header-title {
+velt-recording-preview-steps-dialog-mic-button-on-internal {
+  &:empty {
     display: none !important;
   }
+}
 
-  .video-timeline-container {
-    padding: 0px !important;
-  }
+.velt-recorder-control-panel-loading--floating-mode {
+  all: initial !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
 
-  .velt-video-editor-player--header {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding-inline: 20px !important;
-    height: 76px !important;
-    border-bottom: 1px solid #E0E0E0 !important;
-    gap: 8px !important;
-  }
-
-  .velt-video-editor-player--apply-button {
-    all: initial !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    background-color: #212121 !important;
-    border-radius: 8px !important;
-    padding-inline: 16px !important;
-    height: 36px !important;
-    cursor: pointer !important;
-    color: #fff !important;
+  .velt-recorder-control-panel-loading--text {
+    color: #212121 !important;
+    font-family: "Inter", sans-serif !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    font-family: 'Inter', sans-serif !important;
+  }
+}
 
-    &.velt-video-editor-player--apply-disabled-control {
-        cursor: not-allowed !important;
-        opacity: 0.6 !important;
+/* .velt-video-editor-player--header-title {
+  display: none !important;
+}
+
+.video-timeline-container {
+  padding: 0px !important;
+}
+
+.velt-video-editor-player--header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-inline: 20px !important;
+  height: 76px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  gap: 8px !important;
+}
+
+.velt-video-editor-player--apply-button {
+  all: initial !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background-color: #212121 !important;
+  border-radius: 8px !important;
+  padding-inline: 16px !important;
+  height: 36px !important;
+  cursor: pointer !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: "Inter", sans-serif !important;
+
+  &.velt-video-editor-player--apply-disabled-control {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+  }
+
+  app-if {
+    &:empty {
+      display: none !important;
     }
-
-    app-if {
-        &:empty {
-            display: none !important;
-        }
-    }
   }
+}
 
-  .velt-video-editor-player--close-button {
-    &.velt-video-editor-player--close-disabled-control {
-        cursor: not-allowed !important;
-        opacity: 0.6 !important;
-    }
+.velt-video-editor-player--close-button {
+  &.velt-video-editor-player--close-disabled-control {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
   }
+}
 
-  .velt-video-editor-player--header-actions {
-    gap: 8px !important;
-  }
+.velt-video-editor-player--header-actions {
+  gap: 8px !important;
+}
 
-  .velt-video-editor-player--timeline-container {
-    max-width: 881px !important;
-    padding-inline: 0px !important;
-    margin-inline: auto !important;
-  }
+.velt-video-editor-player--timeline-container {
+  max-width: 881px !important;
+  padding-inline: 0px !important;
+  margin-inline: auto !important;
+}
 
-  .video-editor-player-actions {
+.video-editor-player-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  height: 44px !important;
+  padding-inline: 4px !important;
+  gap: 4px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  width: fit-content !important;
+  align-self: center !important;
+  position: absolute !important;
+  top: -22% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000 !important;
+  background-color: #fff !important;
+
+  .video-editor-player-split-button,
+  .video-editor-player-delete-button,
+  .video-editor-player-add-zoom-button {
+    all: initial !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important;
-    height: 44px !important;
-    padding-inline: 4px !important;
     gap: 4px !important;
-    border-radius: 8px !important;
-    border: 1px solid #E0E0E0 !important;
-    width: fit-content !important;
-    align-self: center !important;
-    position: absolute !important;
-    top: -22% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 1000 !important;
-    background-color: #fff !important;
+    height: 36px !important;
+    padding-inline: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #212121 !important;
+    font-family: "Inter", sans-serif !important;
+    text-transform: none !important;
+    cursor: pointer !important;
 
-    .video-editor-player-split-button, .video-editor-player-delete-button, .video-editor-player-add-zoom-button {
-        all: initial !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 4px !important;
-        height: 36px !important;
-        padding-inline: 8px !important;
-        font-size: 14px !important;
-        font-weight: 500 !important;
-        color: #212121 !important;
-        font-family: 'Inter', sans-serif !important;
-        text-transform: none !important;
-        cursor: pointer !important;
-
-        svg {
-            width: 16px !important;
-            height: 16px !important;
-        }
-    }
-
-    .video-editor-player-delete-button {
-        svg {
-            color: var(--velt-error) !important;
-        }
-    }
-
-    .velt-video-editor-player--trim-disabled-control {
-        cursor: not-allowed !important;
-        opacity: 0.6 !important;
-    }
-
-    .velt-video-editor-player--delete-disabled-control {
-        cursor: not-allowed !important;
-        opacity: 0.6 !important;
-    }
-
-    .velt-video-editor-player--add-zoom-disabled-control {
-        cursor: not-allowed !important;
-        opacity: 0.6 !important;
+    svg {
+      width: 16px !important;
+      height: 16px !important;
     }
   }
 
+  .video-editor-player-delete-button {
+    svg {
+      color: var(--velt-error) !important;
+    }
+  }
+
+  .velt-video-editor-player--trim-disabled-control {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+  }
+
+  .velt-video-editor-player--delete-disabled-control {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+  }
+
+  .velt-video-editor-player--add-zoom-disabled-control {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+  }
+}
+
 .video-editor-player-container {
-    position: relative !important;
-    height: 135px !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    border: 1px solid #E0E0E0 !important;
-    flex-direction: column !important;;
+  position: relative !important;
+  height: 135px !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  flex-direction: column !important;
 }
 
 .video-editor-player-footer {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100vw !important;
-    gap: 16px !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100vw !important;
+  gap: 16px !important;
 
-    velt-video-editor-player-timeline-internal {
-        flex: 1 !important;
-        max-width: 887px !important;
-    }
+  velt-video-editor-player-timeline-internal {
+    flex: 1 !important;
+    max-width: 887px !important;
+  }
 
-    velt-video-editor-player-toggle-button-internal {
-        padding-top: 11px !important;
-    }
+  velt-video-editor-player-toggle-button-internal {
+    padding-top: 11px !important;
+  }
 }
 
 .time-markers {
-    display: none !important;
+  display: none !important;
 }
 
 .velt-video-editor-player--preview-trim-button {
-    color: #212121 !important;
+  color: #212121 !important;
 
-    svg {
-        width: 24px !important;
-        height: 24px !important;
-    }
+  svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
 
 .trim-section {
-    border-radius: 7px !important;
-}
+  border-radius: 7px !important;
+} */
 
 .velt-recorder-saving {
-    .recorder-timer-container {
-        display: none !important;
-    }
+  .recorder-timer-container {
+    display: none !important;
+  }
 }
 
 app-recorder-control-panel-floating-mode-waveform {
-    display: none !important;
+  display: none !important;
 }
 
-video {
-    background-color: #e8e8e8 !important;
-}
+/* video {
+  background-color: #e8e8e8 !important;
+} */
 
 app-recorder-control-panel-screen-mini-container {
-    margin: 0px !important;
+  margin: 0px !important;
+}
+
+
+
+.velt-video-editor-player--close-button-text {
+    height: 36px !important;
 }
