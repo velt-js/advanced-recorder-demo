@@ -28,11 +28,11 @@ export default function Recorder() {
             // @ts-ignore
             recorderUtils?.enableOnboardingTooltip();
 
-            setTimeout(() => {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                recorderUtils?.disableOnboardingTooltip()
-            }, 5000);
+            // setTimeout(() => {
+            //     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //     // @ts-ignore
+            //     recorderUtils?.disableOnboardingTooltip()
+            // }, 5000);
         }
     }, [recordingDoneEvent, recorderUtils]);
 
