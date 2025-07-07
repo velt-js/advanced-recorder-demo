@@ -33,8 +33,7 @@ const VeltRecordingControlPanel = () => {
                             <VeltRecorderControlPanelWireframe.FloatingMode.ActionBar.Toggle.Play>
                                 <div className='outline-button-container'>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.66667 2.66666H4V13.3333H6.66667V2.66666Z" fill="black" />
-                                        <path d="M11.9997 2.66666H9.33301V13.3333H11.9997V2.66666Z" fill="black" />
+                                        <path d="M6.3335 10V6M9.66683 10V6M14.6668 8C14.6668 11.6819 11.6821 14.6667 8.00016 14.6667C4.31826 14.6667 1.3335 11.6819 1.3335 8C1.3335 4.3181 4.31826 1.33333 8.00016 1.33333C11.6821 1.33333 14.6668 4.3181 14.6668 8Z" stroke="#212121" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
 
                                     <span className='button-container-label-text'>
