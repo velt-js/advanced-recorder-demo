@@ -40,7 +40,7 @@ export default function Recorder() {
     return (
         <div className="flex flex-col gap-4 items-center justify-center min-h-screen min-w-screen">
             <VeltRecorderTool type="screen" shadowDom={false}/>
-            <VeltRecorderControlPanel autoOpenVideoEditor={true} settingsEmbedded={true} recordingCountdown={false} videoEditor={true}/>
+            <VeltRecorderControlPanel autoOpenVideoEditor={true} settingsEmbedded={true} recordingCountdown={false} videoEditor={true} hourFormat={true}/>
             <div className="flex flex-col gap-4">
                 {recordings.map((recording: RecorderData) => (
                     <div key={recording?.recorderId}>
