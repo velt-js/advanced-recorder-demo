@@ -193,6 +193,25 @@
   padding: 16px;
   cursor: pointer;
 
+  svg {
+    color: #E93328;
+  }
+
+  &.second-variant {
+    background-color: rgba(255, 0, 0, 0.171);
+    border: 1px solid red;
+    border-radius: 16px;
+    
+
+    span {
+        color: red;
+    }
+    
+    svg {
+        color: red;
+    }
+  }
+
   span {
     font-size: 14px;
     font-weight: 600;

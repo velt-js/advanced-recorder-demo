@@ -1,4 +1,4 @@
-import { VeltRecorderTool, VeltRecorderControlPanel, VeltRecorderPlayer, useRecordings, useRecorderEventCallback, useRecorderUtils } from "@veltdev/react";
+import { VeltRecorderTool, VeltRecorderControlPanel, VeltRecorderPlayer, useRecordings, useRecorderEventCallback, useRecorderUtils, useVeltInitState } from "@veltdev/react";
 import { RecorderData } from "@veltdev/types";
 import { useEffect, useState } from "react";
 
@@ -8,6 +8,8 @@ export default function Recorder() {
     const recordingsData = useRecordings();
 
     const recorderUtils = useRecorderUtils();
+
+    const initState = useVeltInitState();
 
     useEffect(() => {
         setRecordings(recordingsData);
@@ -36,21 +38,27 @@ export default function Recorder() {
         }
     }, [recordingDoneEvent, recorderUtils]);
 
+    useEffect(() => {
+        console.log('initState: ', initState);
+    }, [initState]);
+
 
     return (
         <div className="flex flex-col gap-4 items-center justify-center min-h-screen min-w-screen">
-            {/* <VeltRecorderTool type="screen" shadowDom={false} variant="tool1" />
-            <VeltRecorderTool type="screen" shadowDom={false} variant="tool2"/> */}
-            <VeltRecorderTool type="screen" shadowDom={false} />
+            {!initState && <div className="loader"></div>}
+            {initState && <>
+                <VeltRecorderTool type="screen" shadowDom={false} variant="tool1" />
+                <VeltRecorderTool type="screen" shadowDom={false} variant="tool2" />
 
-            <VeltRecorderControlPanel autoOpenVideoEditor={true} settingsEmbedded={true} recordingCountdown={false} videoEditor={true}/>
-            <div className="flex flex-col gap-4">
-                {recordings.map((recording: RecorderData) => (
-                    <div key={recording?.recorderId}>
-                        <VeltRecorderPlayer recorderId={recording?.recorderId} />
-                    </div>
-                ))}
-            </div>
+                <VeltRecorderControlPanel autoOpenVideoEditor={true} settingsEmbedded={true} recordingCountdown={false} videoEditor={true} retakeOnVideoEditor={true} />
+                <div className="flex flex-col gap-4">
+                    {recordings.map((recording: RecorderData) => (
+                        <div key={recording?.recorderId}>
+                            <VeltRecorderPlayer recorderId={recording?.recorderId} />
+                        </div>
+                    ))}
+                </div>
+            </>}
         </div>
     );
 }
