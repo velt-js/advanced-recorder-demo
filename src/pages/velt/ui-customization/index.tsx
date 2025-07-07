@@ -59,7 +59,6 @@ const VeltCustomization = () => {
             <VeltRecorderScreenTool />
             <VeltMediaSourceSettings />
             <VeltRecordingControlPanel />
-            {/* <VeltVideoEditorPlayer /> */}
             <VeltRecordingPreviewStepsDialog />
         </VeltWireframe >
     );
