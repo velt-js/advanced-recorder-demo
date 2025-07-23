@@ -1,4 +1,4 @@
-import { VeltButtonWireframe, VeltRecordingPreviewStepsDialogWireframe } from "@veltdev/react";
+import { VeltButtonWireframe, VeltIf, VeltRecordingPreviewStepsDialogWireframe } from "@veltdev/react";
 
 const VeltRecordingPreviewStepsDialog = () => {
     return (
@@ -8,8 +8,7 @@ const VeltRecordingPreviewStepsDialog = () => {
                     <span className='preferences-label'>Preferences</span>
                     <VeltRecordingPreviewStepsDialogWireframe.Video.SettingsPanel />
                     <div className='divider'></div>
-                    <VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel
-                        veltClass="'border-top': {borderPosition} === 'top', 'border-bottom': {borderPosition} === 'bottom'">
+                    <VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel>
                         <div className="button-panel-container">
                             <VeltButtonWireframe id='transcribe-button' type='single-select' group='transcribe-group'>
                                 <div className='button-container'>
@@ -39,7 +38,6 @@ const VeltRecordingPreviewStepsDialog = () => {
                                     </div>
                                 </div>
                             </VeltButtonWireframe>
-                            <hr className='divider top-divider' />
                             <VeltButtonWireframe id='audio-button' type='single-select' group='transcribe-group'>
                                 <div className='button-container'>
                                     <span className='button-container-icon'>
@@ -66,7 +64,6 @@ const VeltRecordingPreviewStepsDialog = () => {
                                     </div>
                                 </div>
                             </VeltButtonWireframe>
-                            <hr className='divider bottom-divider' />
                             <VeltButtonWireframe id='turn-off-mic-button' type='single-select' group='transcribe-group' active={true}>
                                 <div className='button-container'>
                                     <span className='button-container-icon'>
@@ -92,6 +89,20 @@ const VeltRecordingPreviewStepsDialog = () => {
                                     </div>
                                 </div>
                             </VeltButtonWireframe>
+                            <VeltIf condition="{state} === 'turn-off-mic'" >
+                                <div className='divider' style={{ marginTop: '40px' }}></div>
+                                <VeltButtonWireframe id='play-audio-button' type='button-toggle'>
+                                    <div className='button-container play-audio-button'>
+                                        <div className='button-container-label'>
+                                            <span className='button-container-label-text'>Play audio while recording</span>
+                                            <span className='button-container-label-description'>Sync screen recording with your script. Does not affect recording audio.</span>
+                                        </div>
+                                        <div className='button-container-toggle-button'>
+                                                <div className="toggle-circle"></div>
+                                        </div>
+                                    </div>
+                                </VeltButtonWireframe>
+                            </VeltIf>
                             <VeltRecordingPreviewStepsDialogWireframe.Video.StartRecording>
                                 <div className='recorder-button-container'>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
