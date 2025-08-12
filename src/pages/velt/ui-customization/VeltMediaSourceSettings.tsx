@@ -1,9 +1,10 @@
-import { VeltIf, VeltMediaSourceSettingsWireframe } from "@veltdev/react";
+import { VeltButtonWireframe, VeltIf, VeltMediaSourceSettingsWireframe } from "@veltdev/react";
 
 const VeltMediaSourceSettings = () => {
     return (
         <VeltMediaSourceSettingsWireframe>
             <div className='media-source-settings-container'>
+
                 <VeltMediaSourceSettingsWireframe.Audio>
                     <div className='media-source-settings-overlay-container'>
                         <div className='settings-toggle-icon-container'>
@@ -19,16 +20,18 @@ const VeltMediaSourceSettings = () => {
                                 <span className='settings-toggle-icon-container-label'>No device found</span>
                             </VeltIf>
                             <VeltMediaSourceSettingsWireframe.Audio.ToggleIcon>
-                                <VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Open>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4 6L8 10L12 6" stroke="#BDBDBD" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Open>
-                                <VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Close>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4 6L8 10L12 6" stroke="#BDBDBD" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Close>
+                                <VeltButtonWireframe id='audio-permission' type='button'>
+                                    <VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Open>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#BDBDBD" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Open>
+                                    <VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Close>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#BDBDBD" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </VeltMediaSourceSettingsWireframe.Audio.ToggleIcon.Close>
+                                </VeltButtonWireframe>
                             </VeltMediaSourceSettingsWireframe.Audio.ToggleIcon>
                         </div>
 

@@ -85,6 +85,12 @@ const VeltCustomization = () => {
             if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'retake-recording') {
                 recorderUtils?.initRecording('screen');
             }
+
+            if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'audio-permission') {
+                recorderUtils?.askDevicePermission({
+                    audio: true,
+                })
+            }
         }
     }, [veltButtonClickEventData, recorderUtils, client]);
 
