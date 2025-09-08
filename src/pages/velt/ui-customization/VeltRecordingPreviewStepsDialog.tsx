@@ -124,6 +124,7 @@ const VeltRecordingPreviewStepsDialog = () => {
                     </VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel>
                 </div>
                 <div className="right-panel">
+                    <VeltRecordingPreviewStepsDialogWireframe.Video.Timer />
                     <VeltRecordingPreviewStepsDialogWireframe.Video.VideoPlayer />
                 </div>
             </div>
