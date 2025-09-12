@@ -124,8 +124,25 @@ const VeltRecordingPreviewStepsDialog = () => {
                     </VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel>
                 </div>
                 <div className="right-panel">
+                    <VeltIf condition="!{countdownStarted}">
+                        <div className="preview-container">
+                            <div className="preview-container-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" />
+                                    <rect x="1.47826" y="3.86937" width="15.3043" height="11.4783" rx="1.43478" fill="#e8e8e8" stroke="currentColor" strokeWidth="0.956522" />
+                                    <line x1="4.46697" y1="6.61946" x2="6.14088" y2="6.61946" stroke="currentColor" strokeWidth="1.19565" strokeLinecap="round" />
+                                    <rect x="7.21752" y="8.65209" width="15.3043" height="11.4783" rx="1.43478" fill="#e8e8e8" stroke="currentColor" strokeWidth="0.956522" />
+                                    <line x1="10.2062" y1="11.4022" x2="11.8801" y2="11.4022" stroke="currentColor" strokeWidth="1.19565" strokeLinecap="round" />
+                                </svg>
+                            </div>
+                            <div className="preview-container-label">
+                                Click &apos;Record&apos; to select window
+                            </div>
+                        </div>
+                        
+                    </VeltIf>
                     <VeltRecordingPreviewStepsDialogWireframe.Video.Timer />
-                    <VeltRecordingPreviewStepsDialogWireframe.Video.VideoPlayer />
+                    {/* <VeltRecordingPreviewStepsDialogWireframe.Video.VideoPlayer /> */}
                 </div>
             </div>
         </VeltRecordingPreviewStepsDialogWireframe.Video >

@@ -382,6 +382,24 @@ app-recording-preview-steps-dialog-start-recording {
   }
 }
 
+.preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+
+  .preview-container-icon {
+    color: #212121;
+  }
+
+  .preview-container-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+  }
+}
+
 .velt-media-source-settings-label,
 .velt-media-source-settings-options--label-selected,
 .settings-toggle-icon-container-label {
