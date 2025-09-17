@@ -198,6 +198,11 @@
     justify-content: center;
     background-color: #e8e8e8;
     padding: 100px;
+    position: relative;
+
+    app-recording-preview-steps-dialog-timer {
+      position: absolute;
+    }
   }
 }
 
@@ -500,4 +505,16 @@ app-recorder-control-panel-screen-mini-container {
 
 .velt-video-editor-player--close-button-text {
   height: 36px !important;
+}
+
+.velt-recording-preview-screen--player {
+  object-fit: contain !important;
+}
+
+.preview-player {
+  .right-panel {
+    app-if {
+      position: absolute !important;
+    }
+  }
 }

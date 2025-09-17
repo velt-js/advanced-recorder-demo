@@ -3,7 +3,7 @@ import { VeltButtonWireframe, VeltIf, VeltRecordingPreviewStepsDialogWireframe }
 const VeltRecordingPreviewStepsDialog = () => {
     return (
         <VeltRecordingPreviewStepsDialogWireframe.Video>
-            <div className="recording-preview-steps-dialog-video-wireframe-container">
+            <div className="recording-preview-steps-dialog-video-wireframe-container preview-player">
                 <div className="left-panel">
                     <span className='preferences-label'>Preferences</span>
                     <VeltRecordingPreviewStepsDialogWireframe.Video.SettingsPanel />
@@ -98,7 +98,7 @@ const VeltRecordingPreviewStepsDialog = () => {
                                             <span className='button-container-label-description'>Sync screen recording with your script. Does not affect recording audio.</span>
                                         </div>
                                         <div className='button-container-toggle-button'>
-                                                <div className="toggle-circle"></div>
+                                            <div className="toggle-circle"></div>
                                         </div>
                                     </div>
                                 </VeltButtonWireframe>
@@ -124,7 +124,7 @@ const VeltRecordingPreviewStepsDialog = () => {
                     </VeltRecordingPreviewStepsDialogWireframe.Video.ButtonPanel>
                 </div>
                 <div className="right-panel">
-                    <VeltIf condition="!{countdownStarted}">
+                    <VeltIf condition="!{mediaConfig.screen.stream}">
                         <div className="preview-container">
                             <div className="preview-container-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,10 +139,10 @@ const VeltRecordingPreviewStepsDialog = () => {
                                 Click &apos;Record&apos; to select window
                             </div>
                         </div>
-                        
+
                     </VeltIf>
                     <VeltRecordingPreviewStepsDialogWireframe.Video.Timer />
-                    {/* <VeltRecordingPreviewStepsDialogWireframe.Video.VideoPlayer /> */}
+                    <VeltRecordingPreviewStepsDialogWireframe.Video.ScreenPlayer />
                 </div>
             </div>
         </VeltRecordingPreviewStepsDialogWireframe.Video >

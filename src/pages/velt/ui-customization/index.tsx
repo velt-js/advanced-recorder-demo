@@ -91,6 +91,10 @@ const VeltCustomization = () => {
                     audio: true,
                 })
             }
+
+            if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'record-screen-button') {
+                recorderUtils?.requestScreenPermission();
+            }
         }
     }, [veltButtonClickEventData, recorderUtils, client]);
 
