@@ -518,3 +518,7 @@ app-recorder-control-panel-screen-mini-container {
     }
   }
 }
+
+app-recorder-control-panel-loading {
+   width: auto !important;
+}
