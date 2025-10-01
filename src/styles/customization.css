@@ -200,6 +200,10 @@
     padding: 100px;
     position: relative;
 
+    app-if {
+        align-self: flex-start;
+    }
+
     app-recording-preview-steps-dialog-timer {
       position: absolute;
     }
