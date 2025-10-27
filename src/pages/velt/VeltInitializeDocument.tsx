@@ -6,9 +6,9 @@ export default function VeltInitializeDocument() {
   const { setDocuments } = useSetDocuments();
   const document = useMemo(() => [
     {
-      id: 'video-recording-demo',
+      id: 'video-recording-demo-6',
       metadata: {
-        documentName: 'Video Recording Demo'
+        documentName: 'Video Recording Demo 6'
       }
     },
   ], []);
