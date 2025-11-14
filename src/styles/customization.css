@@ -200,7 +200,7 @@
     padding: 100px;
     position: relative;
 
-    app-if {
+    .recorder-timer-container-if {
         align-self: flex-start;
     }
 
@@ -515,15 +515,10 @@ app-recorder-control-panel-screen-mini-container {
   object-fit: contain !important;
 }
 
-.preview-player {
-  .right-panel {
-    app-if {
-      position: absolute !important;
-    }
-  }
-}
-
-
 app-recorder-control-panel-loading {
    width: auto !important;
+}
+
+.preview-container-if {
+    align-self: center !important;
 }
