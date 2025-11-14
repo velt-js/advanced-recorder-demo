@@ -1,4 +1,4 @@
-import { useSetDocuments, useVeltClient } from '@veltdev/react';
+import { useSetDocuments } from '@veltdev/react';
 import { useEffect, useMemo } from 'react';
 
 // [VELT] Initializes the Velt document when the photo details page is loaded.
@@ -6,9 +6,9 @@ export default function VeltInitializeDocument() {
   const { setDocuments } = useSetDocuments();
   const document = useMemo(() => [
     {
-      id: 'video-recording-demo-9',
+      id: 'video-recording-demo-16',
       metadata: {
-        documentName: 'Video Recording Demo 9'
+        documentName: 'Video Recording Demo 16'
       }
     },
   ], []);
