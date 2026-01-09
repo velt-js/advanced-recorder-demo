@@ -10,7 +10,7 @@ export default function VeltInitializeUser() {
     email: 'dwight@example.com',
     color: '#FF5733',
     textColor: '#FFFFFF',
-    organizationId: 'payroll-review-org-1'
+    organizationId: 'advanced-video-recording-org'
   };
 
   // Initialize Velt with user info and token
